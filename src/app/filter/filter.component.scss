@@ -1,0 +1,33 @@
+.filter-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+
+  margin: 20px 35px;
+
+  .sort {
+    display: flex;
+    align-items: baseline;
+  }
+
+  label {
+    margin-right: 15px;
+  }
+
+  select {
+    width: 100%;
+    padding: 7px 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+.reset-button {
+  margin: 5px 10px 10px 10px;
+  //color: black;
+  span {
+    color: red;
+  }
+}

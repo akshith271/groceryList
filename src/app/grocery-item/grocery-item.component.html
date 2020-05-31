@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header">{{ grocery.name }}</div>
+  <div class="card-body">
+    <div class="card-img">
+      <img src="{{ grocery.image }}" />
+    </div>
+    <div class="description">
+      {{ grocery.description }}
+    </div>
+    <div class="price">
+      Price : {{ grocery.price | currency: "INR" }} per Kilo
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="quantity">
+      <button
+        [disabled]="counter < 2"
+        type="button"
+        class="btn btn-link"
+        (click)="decrement()"
+      >
+        -
+      </button>
+      <label>
+        <input class="form-control" type="text" [(ngModel)]="counter" />
+      </label>
+      <button type="button" class="btn btn-link" (click)="increment()">
+        +
+      </button>
+    </div>
+    <div>
+      <button (click)="addToCart()" class="btn btn-primary btn-sm">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.card {
+  width: 270px;
+  margin: 5px;
+}
+input {
+  width: 50px;
+}
+.quantity{
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+img {
+  width: 100%;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  font-size: 14px;
+}
+.price {
+  font-weight: 600;
+  margin-top: 5px;
+}

@@ -1,0 +1,40 @@
+<div class="filter-container">
+  <div>
+    <div class="form-group">
+      <label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search"
+          [(ngModel)]="filterText"
+          (ngModelChange)="filterTextChanged()"
+        />
+      </label>
+    </div>
+  </div>
+  <div class="sort">
+    <label for="filters">Sort By: </label>
+    <div class="options">
+      <select
+        [(ngModel)]="selected"
+        (ngModelChange)="sort()"
+        name="filters"
+        id="filters"
+      >
+        <option value="" disabled selected>Select your option</option>
+        <option value="priceDescending">Price: High to Low</option>
+        <option value="priceAscending">Price: Low to High</option>
+        <option value="letterAscending">Name: A to Z</option>
+        <option value="letterDescending">Name: Z to A</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <button
+      (click)="resetFilter()"
+      class="btn btn-outline-dark btn-sm reset-button"
+    >
+      <span>X</span> Clear filters
+    </button>
+  </div>
+</div>
